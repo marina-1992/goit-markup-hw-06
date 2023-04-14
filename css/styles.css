@@ -516,6 +516,53 @@ body {
 .footer-link:focus {
   background-color: var(--green-color);
 }
+.footer-subscribe {
+  margin-left: 80px;
+}
+.footer-form {
+  display: flex;
+}
+.footer-input::placeholder {
+  font-size: 12px;
+  line-height: 2;
+  letter-spacing: 0.04em;
+  color: var(--white-color);
+}
+.footer-input {
+  width: 264px;
+  height: 40px;
+  padding: 8px 16px;
+  margin-right: 24px;
+  background-color: transparent;
+  border: 1px solid var(--white-color);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+}
+.footer-submit-btn {
+  display: flex;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  width: 165px;
+  height: 40px;
+  color: var(--white-color);
+
+  background-color: var(--logo-color);
+  border-radius: 4px;
+  padding: 8px 24px;
+  border: none;
+}
+.footer-submit-icon {
+  position: absolute;
+  top: 8px;
+  right: 24px;
+}
+
+.button-submit {
+  position: relative;
+}
+
 /*================Modal Window==========*/
 .backdrop {
   position: fixed;
@@ -538,27 +585,30 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 408px;
-  height: 576px;
+  min-width: 408px;
+  min-height: 584px;
+  padding: 72px 24px 24px 24px;
   background-color: #fcfcfc;
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
-  transition: transform 250ms var(--activ-animation);
 }
 .modal-close {
-  position: absolute;
   top: 24px;
   right: 24px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   width: 24px;
   height: 24px;
   padding: 0;
   background-color: var(--accent-color);
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 50%;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: color 250ms var(--activ-animation),
+    background-color 250ms var(--activ-animation),
+    filter 250ms var(--activ-animation);
 }
 .modal-close-icon {
   fill: currentColor;
@@ -567,4 +617,117 @@ body {
   color: var(--white-color);
   background-color: var(--button-hover-color);
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+.modal-title {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  text-align: center;
+  letter-spacing: 0.02em;
+  color: var(--title-text-color);
+  margin-bottom: 16px;
+}
+.modal-field:nth-child(n + 2) {
+  margin-top: 8px;
+}
+.input-text {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.04em;
+  color: var(--customers-icons);
+}
+.modal-input {
+  width: 100%;
+  height: 40px;
+  border: 1px solid rgba(46, 47, 66, 0.4);
+  border-radius: 4px;
+  padding: 0 0 0 38px;
+  outline: transparent;
+  transition: border-color 250ms var(--activ-animation);
+}
+.input-wrap {
+  position: relative;
+  margin-top: 4px;
+}
+
+.modal-icon {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 16px;
+  transition: fill 250ms var(--activ-animation);
+}
+.modal-input:focus {
+  border-color: var(--logo-color);
+}
+.modal-input:focus + .modal-icon {
+  fill: var(--logo-color);
+}
+.modal-textarea {
+  display: block;
+  width: 100%;
+  height: 120px;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.04em;
+  border: 1px solid rgba(46, 47, 66, 0.4);
+  border-radius: 4px;
+  padding: 8px 0 0 16px;
+  outline: transparent;
+  resize: none;
+}
+.check-icon-box {
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  margin-top: 16px;
+}
+.check-icon-box span {
+  width: 16px;
+  height: 16px;
+  border: 1px solid rgba(46, 47, 66, 0.4);
+  border-radius: 2px;
+  margin-right: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  fill: transparent;
+  transition: background-color 250ms var(--activ-animation),
+    fill 250ms var(--activ-animation);
+}
+.input-check:checked + .check-icon-box span {
+  background-color: var(--button-hover-color);
+  fill: var(--light-color);
+}
+
+.check-text {
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.04em;
+  color: var(--customers-icons);
+}
+.check-text a {
+  color: var(--logo-color);
+}
+.check-btn {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  width: 169px;
+  height: 56px;
+
+  outline: transparent;
+  background-color: var(--logo-color);
+  color: var(--white-color);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border: none;
+  border-radius: 4px;
+  margin-top: 24px;
+  padding: 16px 32px;
 }
