@@ -712,9 +712,7 @@ body {
   color: var(--logo-color);
 }
 .check-btn {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
+  display: block;
   font-style: normal;
   font-weight: 500;
   font-size: 16px;
@@ -728,6 +726,6 @@ body {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border: none;
   border-radius: 4px;
-  margin-top: 24px;
+  margin: 24px auto 0;
   padding: 16px 32px;
 }
